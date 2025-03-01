@@ -23,23 +23,20 @@
 
 // export default App;
 
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginPage from './pages/LoginPage/LoginPage'; // путь к странице логина
-import HomePage from './pages/HomePage/HomePage'; // путь к главной странице
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import RoutesConfig from './routes';  // Импортируем переименованный компонент маршрутов
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
+      <RoutesConfig />  {/* Подключаем маршруты с новым именем */}
     </Router>
   );
 }
 
 export default App;
+
 
 
 
