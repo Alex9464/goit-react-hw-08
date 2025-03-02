@@ -16,7 +16,7 @@ const contactsSlice = createSlice({
       })
       .addCase(fetchContacts.fulfilled, (state, action) => {
         state.loading = false;
-        state.items = action.payload;
+        state.items = action.payload; // Убедимся, что данные загружаются в items
       })
       .addCase(fetchContacts.rejected, (state, action) => {
         state.loading = false;
@@ -42,4 +42,3 @@ export const selectFilteredContacts = createSelector(
 );
 
 export default contactsSlice.reducer;
-
